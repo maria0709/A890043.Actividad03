@@ -3,12 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace A890043.Actividad03
 {
     class LibroDiario
-    {
-        
     {
         public static Dictionary<int, Asientos> Diario = new Dictionary<int, Asientos>();
         static string nombreDiario = "Diario.txt";
