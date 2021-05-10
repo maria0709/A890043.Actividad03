@@ -8,7 +8,6 @@ namespace A890043.Actividad03
 {
     class Funcionalidades
     {
-        // Valida que sea un double y que sea positivo.
         public static double NumeroPositivo(string textoAImprimir)
         {
             double numero;
@@ -40,44 +39,43 @@ namespace A890043.Actividad03
             return numero;
         }
 
-        // Valida que se elija solo entre 2 opciones.
-        internal static string TipoCuenta(string textoAImprimir)
-        {
-            string ingreso;
-            string retorno = "";
-            bool ok = false;
+        //internal static string TipoCuenta(string textoAImprimir)
+        //{
+        //    string ingreso;
+        //    string retorno = "";
+        //    bool ok = false;
 
-            do
-            {
-                Console.WriteLine(textoAImprimir);
-                ingreso = Console.ReadLine().ToUpper();
+        //    do
+        //    {
+        //        Console.WriteLine(textoAImprimir);
+        //        ingreso = Console.ReadLine().ToUpper();
 
-                if (ingreso == "A")
-                {
-                    Console.WriteLine("ACTIVO");
-                    ok = true;
-                    retorno = "Activo";
-                }
-                else if (ingreso == "P")
-                {
-                    Console.WriteLine("PASIVO");
-                    ok = true;
-                    retorno = "Pasivo";
-                }
-                else if (ingreso == "N")
-                {
-                    Console.WriteLine("PATRIMONIO NETO");
-                    ok = true;
-                    retorno = "PatrimonioNeto";
-                }
-                else
-                {
-                    Console.WriteLine($"La opcion '{ingreso}' no es valida. Por favor, intente nuevamente.");
-                }
-            } while (ok == false);
+        //        if (ingreso == "A")
+        //        {
+        //            Console.WriteLine("ACTIVO");
+        //            ok = true;
+        //            retorno = "Activo";
+        //        }
+        //        else if (ingreso == "P")
+        //        {
+        //            Console.WriteLine("PASIVO");
+        //            ok = true;
+        //            retorno = "Pasivo";
+        //        }
+        //        else if (ingreso == "N")
+        //        {
+        //            Console.WriteLine("PATRIMONIO NETO");
+        //            ok = true;
+        //            retorno = "PatrimonioNeto";
+        //        }
+        //        else
+        //        {
+        //            Console.WriteLine($"La opcion '{ingreso}' no es valida. Por favor, intente nuevamente.");
+        //        }
+        //    } while (ok == false);
 
-            return retorno;
-        }
+        //    return retorno;
+        //}
 
         // Valida que el codigo sea un int y no tenga mas de 3 cifras.
         public static int Codigo(string textoAImprimir)
@@ -146,7 +144,7 @@ namespace A890043.Actividad03
 
         // Valida que el usuario elija SI o NO.
         // Util para preguntar si desea continuar.
-        public static string SoN(string textoAImprimir)
+        public static string seguirIngresando(string textoAImprimir)
         {
             bool ok = false;
             string opcionElegida;
@@ -156,11 +154,11 @@ namespace A890043.Actividad03
                 Console.WriteLine(textoAImprimir);
                 opcionElegida = Console.ReadLine().ToUpper();
 
-                if (opcionElegida == "Si")
+                if (opcionElegida == "S")
                 {
                     ok = true;
                 }
-                else if (opcionElegida == "No")
+                else if (opcionElegida == "N")
                 {
                     ok = true;
                 }

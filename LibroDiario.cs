@@ -26,7 +26,7 @@ namespace A890043.Actividad03
         // Solo se utiliza una vez al iniciar el programa.
         public static void IniciarPlanDeCuentas()
         {
-            Console.WriteLine("Buscando 'Plan de cuentas.txt'...");
+            //Console.WriteLine("El 'Plan de cuentas' definido se encuentra cargado.");
             if (File.Exists(nombrePlanDeCuentas))
             {
                 using (var reader = new StreamReader(nombrePlanDeCuentas))     // Importa el txt (si este existe en la ubicacion por defecto)
@@ -41,7 +41,7 @@ namespace A890043.Actividad03
                     }
                 }
 
-                Console.WriteLine("Plan de cuentas encontrado!");
+                Console.WriteLine("El Plan de cuentas se encuentra cargado.");
             }
             else
             {
@@ -58,46 +58,46 @@ namespace A890043.Actividad03
         }
 
         // Agrega una cuenta a Plan verificando que el codigo para identificarla este disponible.
-        public static void AgregarCuenta()
-        {
-            int codigo = Funcionalidades.Codigo("Ingrese el codigo de la cuenta nueva");
-            string nombre = Funcionalidades.Texto("Ingrese el nombre de la cuenta nueva");
-            string tipo = Funcionalidades.TipoCuenta("Es (A)ctivo, (P)asivo o Patrimonio (N)eto?");
-            Cuentas nueva = new Cuentas(codigo, nombre, tipo);
+        //public static void AgregarCuenta()
+        //{
+        //    int codigo = Funcionalidades.Codigo("Ingrese el codigo de la cuenta nueva");
+        //    string nombre = Funcionalidades.Texto("Ingrese el nombre de la cuenta nueva");
+        //    string tipo = Funcionalidades.TipoCuenta("Es (A)ctivo, (P)asivo o Patrimonio (N)eto?");
+        //    Cuentas nueva = new Cuentas(codigo, nombre, tipo);
 
-            if (PlanDeCuentas.ContainsKey(codigo))
-            {
-                Console.WriteLine($"Error: El codigo '{codigo}' ya esta siendo utilizado por otra cuenta. Intente con otro codigo...");
-                Console.ReadKey();
-            }
-            else
-            {
-                PlanDeCuentas.Add(nueva.Codigo, nueva);
-                Console.WriteLine($"Se ha agregado la cuenta '{nueva.Nombre}' con el codigo {nueva.Codigo}");
-                Console.ReadKey();
-                GrabarPlan();
-            }
+        //    if (PlanDeCuentas.ContainsKey(codigo))
+        //    {
+        //        Console.WriteLine($"Error: El codigo '{codigo}' ya esta siendo utilizado por otra cuenta. Intente con otro codigo...");
+        //        Console.ReadKey();
+        //    }
+        //    else
+        //    {
+        //        PlanDeCuentas.Add(nueva.Codigo, nueva);
+        //        Console.WriteLine($"Se ha agregado la cuenta '{nueva.Nombre}' con el codigo {nueva.Codigo}");
+        //        Console.ReadKey();
+        //        GrabarPlan();
+        //    }
 
-        }
+        //}
 
-        // Verifica que la cuenta exista en Plan y la elimina.
-        public static void QuitarCuenta()
-        {
-            int codigo = Funcionalidades.Codigo("Ingrese el codigo de la cuenta a eliminar");
+        ////// Verifica que la cuenta exista en Plan y la elimina.
+        ////public static void QuitarCuenta()
+        ////{
+        ////    int codigo = Funcionalidades.Codigo("Ingrese el codigo de la cuenta a eliminar");
 
-            if (!PlanDeCuentas.TryGetValue(codigo, out var cuentaEliminada))
-            {
-                Console.WriteLine($"No existe una cuenta con el codigo '{codigo}'. Intente nuevamente...");
-                Console.ReadKey();
-            }
-            else
-            {
-                PlanDeCuentas.Remove(codigo);
-                Console.WriteLine($"Se ha eliminado la cuenta '{cuentaEliminada.Nombre}' con el codigo {cuentaEliminada.Codigo}");
-                Console.ReadKey();
-                GrabarPlan();
-            }
-        }
+        ////    if (!PlanDeCuentas.TryGetValue(codigo, out var cuentaEliminada))
+        ////    {
+        ////        Console.WriteLine($"No existe una cuenta con el codigo '{codigo}'. Intente nuevamente...");
+        ////        Console.ReadKey();
+        ////    }
+        ////    else
+        ////    {
+        ////        PlanDeCuentas.Remove(codigo);
+        ////        Console.WriteLine($"Se ha eliminado la cuenta '{cuentaEliminada.Nombre}' con el codigo {cuentaEliminada.Codigo}");
+        ////        Console.ReadKey();
+        ////        GrabarPlan();
+        ////    }
+        ////}
 
         // Print de consola del diccionario Plan.
         public static void ImprimirPlanDeCuentas()
@@ -116,19 +116,19 @@ namespace A890043.Actividad03
         }
 
         // Guarda los cambios realizados al plan de cuentas en el archivo Plan de cuentas.txt
-        private static void GrabarPlan()
-        {
-            using (var writer = new StreamWriter(nombrePlanDeCuentas, append: false))
-            {
-                writer.WriteLine("Codigo|Nombre|Tipo");
+        //private static void GrabarPlan()
+        //{
+        //    using (var writer = new StreamWriter(nombrePlanDeCuentas, append: false))
+        //    {
+        //        writer.WriteLine("Codigo|Nombre|Tipo");
 
-                foreach (var cuentas in PlanDeCuentas.Values)
-                {
-                    var linea = cuentas.Serializar();
-                    writer.WriteLine(linea);
-                }
-            }
-        }
+        //        foreach (var cuentas in PlanDeCuentas.Values)
+        //        {
+        //            var linea = cuentas.Serializar();
+        //            writer.WriteLine(linea);
+        //        }
+        //    }
+        //}
 
         // !-------LIBRO DIARIO-------! //
 
@@ -137,7 +137,7 @@ namespace A890043.Actividad03
         // Solo se utiliza una vez al iniciar el programa.
         public static void IniciarDiario()
         {
-            Console.WriteLine($"Buscando 'Diario.txt'...");
+           // Console.WriteLine($"Buscando 'Diario.txt'...");
             if (File.Exists(nombreDiario))
             {
                 using (var reader = new StreamReader(nombreDiario))     // Importa el txt (si este existe en la ubicacion por defecto)
@@ -254,7 +254,7 @@ namespace A890043.Actividad03
                     writer.Write("NroAsiento|      Fecha      |CodigoCuenta|   Debe   |   Haber  ");
                 }
             }
-            Console.WriteLine("Libro Diario encontrado!");
+            Console.WriteLine("Presionar [Enter] para visualizar el menú.");
             GrabarDiario();
         }
 

@@ -37,7 +37,7 @@ namespace A890043.Actividad03
 
                 do
                 {
-                    debe = 0;
+                    debe = 0;          // Reset de variables para evitar acarreo de errores.
                     haber = 0;
 
                     codigo = Funcionalidades.Codigo($"\nIngrese el codigo de cuenta del DEBE:");
@@ -50,7 +50,7 @@ namespace A890043.Actividad03
                     else
                     {
                         debe = Funcionalidades.NumeroPositivo($"Ingrese el monto de '{LibroDiario.PlanDeCuentas[codigo].Nombre}':");
-                        deseaContinuar = Funcionalidades.SoN("Desea agregar mas cuentas dentro del DEBE? (S)i o (N)o");
+                        deseaContinuar = Funcionalidades.seguirIngresando("¿Desea ingresar más cuentas dentro del DEBE?. Ingrese (S)--> SI o (N)--> NO.");
 
                         if (deseaContinuar == "N")
                         {
@@ -79,7 +79,7 @@ namespace A890043.Actividad03
                     else
                     {
                         haber = Funcionalidades.NumeroPositivo($"Ingrese el monto de '{LibroDiario.PlanDeCuentas[codigo].Nombre}':");
-                        deseaContinuar = Funcionalidades.SoN("Desea agregar mas cuentas dentro del HABER? (S)i o (N)o");
+                        deseaContinuar = Funcionalidades.seguirIngresando("¿Desea ingresar más cuentas dentro del HABER?. Ingrese (S)--> SI o (N)--> NO.");
 
                         if (deseaContinuar == "N")
                         {
