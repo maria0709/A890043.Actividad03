@@ -35,7 +35,7 @@ namespace A890043.Actividad03
             }
             else
             {
-                Console.WriteLine($"Se ha creado el archivo 'Plan de cuentas' en la ubicación '../bin/Debug' de este proyecto\n");
+                Console.WriteLine($"Se ha creado el archivo 'Plan de cuentas.txt' en la ubicación '../bin/Debug' de este proyecto.\n");
                 Console.ReadKey();
 
                 using (StreamWriter writer = File.CreateText(nombrePlanDeCuentas))
@@ -50,8 +50,9 @@ namespace A890043.Actividad03
         { 
             if (PlanDeCuentas.Count == 0)
             {
-                Console.WriteLine("El plan de cuentas no tiene cuentas. Por favor,inserte el archivo 'Plan de cuentas.txt' en la ubicación '../bin/Debug' de este proyecto .");
-
+                Console.WriteLine("El plan de cuentas se encuentra vacía.");
+                Console.WriteLine("Por favor, inserte el archivo 'Plan de cuentas.txt' en la ubicación '../bin/Debug' de este proyecto.");
+                Console.WriteLine("EL archivo correspondiente se encuentra en la carpeta'A890043.Actividad03'. Gracias!");
             }
             else
             {
@@ -143,7 +144,7 @@ namespace A890043.Actividad03
             else
             {
                
-                Console.WriteLine($"Se ha creado el archivo 'Diario.txt' en la ubicación '.../bin/Debug' de este proyecto\n");
+                Console.WriteLine($"Se ha creado el archivo 'Diario.txt' en la ubicación '../bin/Debug' de este proyecto.\n");
                 Console.ReadKey();
 
                 using (StreamWriter writer = File.CreateText(nombreDiario))

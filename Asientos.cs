@@ -32,7 +32,7 @@ namespace A890043.Actividad03
             {
                 bool continuar = true;
                 string deseaContinuar;
-                Console.WriteLine("\nPLAN DE CUENTAS\n");
+                Console.WriteLine("\n                                  PLAN DE CUENTAS\n");
                 LibroDiario.ImprimirPlanDeCuentas();
 
                 do
@@ -151,7 +151,6 @@ namespace A890043.Actividad03
                 if (contador < Haber.Count)
                 {
                     retorno += $"\n|{Numero.ToString().PadLeft(10, ' ')}|{Fecha} |{item.Key.ToString().PadLeft(12, ' ')}|{padding.PadLeft(13, ' ')}|{item.Value.ToString().PadLeft(10, ' ')}   |"; 
-                    //  retorno += $"\n|{padding.PadLeft(10, ' ')}|{padding.PadRight(19, ' ')}|{item.Key.ToString().PadLeft(12, ' ')}|{padding.PadLeft(13, ' ')}|{item.Value.ToString().PadLeft(10, ' ')}   |";
                 }
                 else
                 {
