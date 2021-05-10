@@ -28,7 +28,7 @@ namespace A890043.Actividad03
             Console.WriteLine("--------------------------------------------------");
             do
             {
-                Console.Write("Ingrese una opción del menú y presione [Enter]: ");
+                Console.Write("Ingrese una opción del menú y presione [Enter]: \n");
 
                 opcion = Console.ReadLine().ToUpper();
 
@@ -41,9 +41,9 @@ namespace A890043.Actividad03
                         break;
 
                     case "2":
-                        Console.WriteLine("\tLIBRO DIARIO\n");
+                        Console.WriteLine("\n                                 LIBRO DIARIO\n");
                         LibroDiario.VisualizarLibroDiario();
-                        Console.WriteLine("------ Presione [Enter] para volver a seleccionar otra opción del menú ------\n");
+                        Console.WriteLine("\n-----Presione [Enter] para volver a seleccionar otra opción del menú-----");
                         Console.ReadKey();
                         break;
 

@@ -76,6 +76,7 @@ namespace A890043.Actividad03
 
 
 
+
         public static string SeguirIngresando(string textoAImprimir)
         {
             bool ok = false;

@@ -111,6 +111,7 @@ namespace A890043.Actividad03
 
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine($"Se ha creado el asiento Nº{Numero}.");
+            Console.ResetColor();
             Console.ReadKey();
             Console.Clear();
         }
@@ -149,8 +150,8 @@ namespace A890043.Actividad03
             {
                 if (contador < Haber.Count)
                 {
- 
-                    retorno += $"\n|{padding.PadLeft(10, ' ')}|{padding.PadRight(19, ' ')}|{item.Key.ToString().PadLeft(12, ' ')}|{padding.PadLeft(13, ' ')}|{item.Value.ToString().PadLeft(10, ' ')}   |";
+                    retorno += $"\n|{padding.PadLeft(10, ' ')}|{Fecha} |{item.Key.ToString().PadLeft(12, ' ')}|{padding.PadLeft(13, ' ')}|{item.Value.ToString().PadLeft(10, ' ')}   |"; 
+                    //  retorno += $"\n|{padding.PadLeft(10, ' ')}|{padding.PadRight(19, ' ')}|{item.Key.ToString().PadLeft(12, ' ')}|{padding.PadLeft(13, ' ')}|{item.Value.ToString().PadLeft(10, ' ')}   |";
                 }
                 else
                 {

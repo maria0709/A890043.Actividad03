@@ -50,7 +50,7 @@ namespace A890043.Actividad03
         { 
             if (PlanDeCuentas.Count == 0)
             {
-                Console.WriteLine("El plan de cuentas no tiene cuentas. Por favor,inserte el archivo de plan de cuentas en la ubicación '../bin/Debug' de este proyecto .");
+                Console.WriteLine("El plan de cuentas no tiene cuentas. Por favor,inserte el archivo 'Plan de cuentas.txt' en la ubicación '../bin/Debug' de este proyecto .");
 
             }
             else
@@ -148,8 +148,8 @@ namespace A890043.Actividad03
 
                 using (StreamWriter writer = File.CreateText(nombreDiario))
                 {
-                    writer.Write("NroAsiento |      Fecha                |         CodigoCuenta                  |         Debe                              |         Haber             ");
-                }             //  012345678901|012345678901234567890|012345678901|0123456789012345|0123456789012345
+                    writer.Write("|NroAsiento|       Fecha       |CodigoCuenta|     Debe    |    Haber    |");
+                }       
             }
             Console.WriteLine("Presionar [Enter] para visualizar el menú.");
             GrabarDiario();
@@ -168,7 +168,7 @@ namespace A890043.Actividad03
         {
             if (Diario.Count == 0)
             {
-                Console.WriteLine("No se han ingresado asientos...\n");
+                Console.WriteLine("No se han ingresado asientos.\n");
             }
             else
             {
