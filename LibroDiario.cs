@@ -35,54 +35,31 @@ namespace A890043.Actividad03
             }
             else
             {
-                Console.WriteLine($"Se ha creado el archivo 'Plan de cuentas' en la ubicación '.../bin/Debug' de este proyecto\n");
+                Console.WriteLine($"Se ha creado el archivo 'Plan de cuentas' en la ubicación '../bin/Debug' de este proyecto\n");
                 Console.ReadKey();
 
                 using (StreamWriter writer = File.CreateText(nombrePlanDeCuentas))
                 {
-                    writer.Write("Codigo|Nombre|Tipo\n");
-                    writer.Write("11 |Construcciones en proceso|Activo\n");
-                    writer.Write("12 | Otras propiedades, planta y equipo | Activo");
-                                    //13 | Activos intangibles y plusvalía | Activo
-                                    //14 | Marcas comerciales | Activo
-                                    //15 | Programas de computador | Activo
-                                    //16 | Licencias y franquicias | Activo
-                                    //17 | Derechos de propiedad intelectual, patentes y otros | Activo
-                                    //18 | Recetas, fórmulas, modelos, diseños y prototipos | Activo
-                                    //19 | Activos intangibles en desarrollo | Activo
-                                    //20 | Inversiones en subsidiarias, negocios conjuntos y asociadas | Activo
-                                    //21 | Deudores comerciales | Activo
-                                    //22 | Cuentas por cobrar | Activo
-                                    //23 | Activos financieros | Activo
-                                    //24 | Efectivo en caja | Activo
-                                    //25 | Cuentas corrientes | Activo
-                                    //26 | Depósitos a corto plazo | Activo
-                                    //27 | Inversiones a corto plazo | Activo
-                                    //28 | Cuentas por pagar comerciales | Pasivo
-                                    //29 | Impuestos por pagar | Pasivo
-                                    //30 | Préstamos bancarios | Pasivo
-                                    //31 | Obligaciones con el público | Pasivo
-                                    //32 | Obligaciones por leasing | Pasivo
-                                    //33 | Capital emitido | PatrimonioNeto
-                                    //34 | Ganancias(pérdidas) acumuladas | PatrimonioNeto")
+                    writer.Write("Codigo|Nombre|Tipo");
+
                 }
             }
         }
 
         public static void ImprimirPlanDeCuentas()
-        {
+        { 
             if (PlanDeCuentas.Count == 0)
             {
-                Console.WriteLine("No se han ingresado cuentas.");
+                Console.WriteLine("El plan de cuentas no tiene cuentas. Por favor,inserte el archivo de plan de cuentas en la ubicación '../bin/Debug' de este proyecto .");
 
             }
             else
             {
                 foreach (var cuenta in PlanDeCuentas)
                 {
-                    Console.WriteLine($"{cuenta.Key} | {cuenta.Value.Nombre} | {cuenta.Value.Tipo} ");
+                    Console.WriteLine($"{cuenta.Key} | {cuenta.Value.Nombre} | {cuenta.Value.Tipo} ");                 
 
-                }            
+                }
             }
         }
 
@@ -154,6 +131,7 @@ namespace A890043.Actividad03
                                 }
                             }
 
+
                             Asientos asientoImportado = new Asientos(numeroAsiento, fecha, debeTemporal, haberTemporal);
                             reader.Close();
                             contadorDeAsientos++;
@@ -170,9 +148,8 @@ namespace A890043.Actividad03
 
                 using (StreamWriter writer = File.CreateText(nombreDiario))
                 {
-                    writer.Write("                  NroAsiento                  |      Fecha                |         CodigoCuenta                  |         Debe                              |         Haber             ");
-                       // "NroAsiento |      Fecha          |CodigoCuenta|   Debe         |   Haber       ");
-                }             // 012345678901|012345678901234567890|012345678901|0123456789012345|0123456789012345
+                    writer.Write("NroAsiento |      Fecha                |         CodigoCuenta                  |         Debe                              |         Haber             ");
+                }             //  012345678901|012345678901234567890|012345678901|0123456789012345|0123456789012345
             }
             Console.WriteLine("Presionar [Enter] para visualizar el menú.");
             GrabarDiario();
@@ -195,8 +172,9 @@ namespace A890043.Actividad03
             }
             else
             {
-                Console.WriteLine("                  NroAsiento                  |      Fecha                |         CodigoCuenta                  |         Debe                              |         Haber             ");
-                foreach (var asiento in Diario)
+                Console.WriteLine("|NroAsiento|       Fecha       |CodigoCuenta|     Debe    |    Haber    |");
+                //                                                               0123456789012-0123456789012
+                 foreach (var asiento in Diario)
                 {
                     Console.WriteLine(asiento.Value.Serializar());
                 }
@@ -209,8 +187,8 @@ namespace A890043.Actividad03
         {
             using (var writer = new StreamWriter(nombreDiario, append: false))
             {
-                writer.WriteLine("                  NroAsiento                  |      Fecha                |         CodigoCuenta                  |         Debe                              |         Haber             ");
-
+                writer.WriteLine("|NroAsiento|       Fecha       |CodigoCuenta|     Debe    |    Haber    |");
+            
                 foreach (var asiento in Diario)
                 {
                     writer.WriteLine(asiento.Value.Serializar());
@@ -219,3 +197,5 @@ namespace A890043.Actividad03
         }
     }
 }
+
+
