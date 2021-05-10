@@ -39,45 +39,7 @@ namespace A890043.Actividad03
             return numero;
         }
 
-        //internal static string TipoCuenta(string textoAImprimir)
-        //{
-        //    string ingreso;
-        //    string retorno = "";
-        //    bool ok = false;
 
-        //    do
-        //    {
-        //        Console.WriteLine(textoAImprimir);
-        //        ingreso = Console.ReadLine().ToUpper();
-
-        //        if (ingreso == "A")
-        //        {
-        //            Console.WriteLine("ACTIVO");
-        //            ok = true;
-        //            retorno = "Activo";
-        //        }
-        //        else if (ingreso == "P")
-        //        {
-        //            Console.WriteLine("PASIVO");
-        //            ok = true;
-        //            retorno = "Pasivo";
-        //        }
-        //        else if (ingreso == "N")
-        //        {
-        //            Console.WriteLine("PATRIMONIO NETO");
-        //            ok = true;
-        //            retorno = "PatrimonioNeto";
-        //        }
-        //        else
-        //        {
-        //            Console.WriteLine($"La opcion '{ingreso}' no es valida. Por favor, intente nuevamente.");
-        //        }
-        //    } while (ok == false);
-
-        //    return retorno;
-        //}
-
-        // Valida que el codigo sea un int y no tenga mas de 3 cifras.
         public static int Codigo(string textoAImprimir)
         {
             int numero;
@@ -112,35 +74,6 @@ namespace A890043.Actividad03
             return numero;
         }
 
-        // Valida que el texto a ingresar no este vacio
-        // ni tenga un largo mayor a 40 caracteres.
-        //public static string Texto(string textoAImprimir)
-        //{
-        //    string ingreso;
-        //    bool ok = false;
-
-        //    do
-        //    {
-        //        Console.WriteLine(textoAImprimir);
-        //        ingreso = Console.ReadLine();
-
-        //        if (string.IsNullOrWhiteSpace(ingreso))
-        //        {
-        //            Console.WriteLine("Este campo no puede estar vacio. Por favor, intente nuevamente.");
-        //        }
-        //        else if (ingreso.Length > 41)
-        //        {
-        //            Console.WriteLine("Este campo no puede tener una longitud mayor a 40 caracteres. Intente nuevamente...");
-        //        }
-        //        else
-        //        {
-        //            ok = true;
-        //        }
-
-        //    } while (ok == false);
-
-        //    return ingreso;
-        //}
 
 
         public static string SeguirIngresando(string textoAImprimir)
