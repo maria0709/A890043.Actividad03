@@ -50,7 +50,7 @@ namespace A890043.Actividad03
                     else
                     {
                         debe = Funcionalidades.NumeroPositivo($"Ingrese el monto de '{LibroDiario.PlanDeCuentas[codigo].Nombre}':");
-                        deseaContinuar = Funcionalidades.seguirIngresando("¿Desea ingresar más cuentas dentro del DEBE?. Ingrese (S)--> SI o (N)--> NO.");
+                        deseaContinuar = Funcionalidades.SeguirIngresando("¿Desea ingresar más cuentas dentro del DEBE?. Ingrese (S)--> SI o (N)--> NO.");
 
                         if (deseaContinuar == "N")
                         {
@@ -79,7 +79,7 @@ namespace A890043.Actividad03
                     else
                     {
                         haber = Funcionalidades.NumeroPositivo($"Ingrese el monto de '{LibroDiario.PlanDeCuentas[codigo].Nombre}':");
-                        deseaContinuar = Funcionalidades.seguirIngresando("¿Desea ingresar más cuentas dentro del HABER?. Ingrese (S)--> SI o (N)--> NO.");
+                        deseaContinuar = Funcionalidades.SeguirIngresando("¿Desea ingresar más cuentas dentro del HABER?. Ingrese (S)--> SI o (N)--> NO.");
 
                         if (deseaContinuar == "N")
                         {

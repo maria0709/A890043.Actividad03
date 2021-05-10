@@ -42,7 +42,7 @@ namespace A890043.Actividad03
 
                     case "2":
                         Console.WriteLine("\tLIBRO DIARIO\n");
-                        LibroDiario.ImprimirDiario();
+                        LibroDiario.VisualizarLibroDiario();
                         Console.WriteLine("------ Presione [Enter] para volver a seleccionar otra opción del menú ------\n");
                         Console.ReadKey();
                         break;

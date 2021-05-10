@@ -267,7 +267,7 @@ namespace A890043.Actividad03
         }
 
         // Print del diccionario Diario.
-        public static void ImprimirDiario()
+        public static void VisualizarLibroDiario()
         {
             if (Diario.Count == 0)
             {

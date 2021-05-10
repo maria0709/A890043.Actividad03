@@ -114,37 +114,36 @@ namespace A890043.Actividad03
 
         // Valida que el texto a ingresar no este vacio
         // ni tenga un largo mayor a 40 caracteres.
-        public static string Texto(string textoAImprimir)
-        {
-            string ingreso;
-            bool ok = false;
+        //public static string Texto(string textoAImprimir)
+        //{
+        //    string ingreso;
+        //    bool ok = false;
 
-            do
-            {
-                Console.WriteLine(textoAImprimir);
-                ingreso = Console.ReadLine();
+        //    do
+        //    {
+        //        Console.WriteLine(textoAImprimir);
+        //        ingreso = Console.ReadLine();
 
-                if (string.IsNullOrWhiteSpace(ingreso))
-                {
-                    Console.WriteLine("Este campo no puede estar vacio. Por favor, intente nuevamente.");
-                }
-                else if (ingreso.Length > 41)
-                {
-                    Console.WriteLine("Este campo no puede tener una longitud mayor a 40 caracteres. Intente nuevamente...");
-                }
-                else
-                {
-                    ok = true;
-                }
+        //        if (string.IsNullOrWhiteSpace(ingreso))
+        //        {
+        //            Console.WriteLine("Este campo no puede estar vacio. Por favor, intente nuevamente.");
+        //        }
+        //        else if (ingreso.Length > 41)
+        //        {
+        //            Console.WriteLine("Este campo no puede tener una longitud mayor a 40 caracteres. Intente nuevamente...");
+        //        }
+        //        else
+        //        {
+        //            ok = true;
+        //        }
 
-            } while (ok == false);
+        //    } while (ok == false);
 
-            return ingreso;
-        }
+        //    return ingreso;
+        //}
 
-        // Valida que el usuario elija SI o NO.
-        // Util para preguntar si desea continuar.
-        public static string seguirIngresando(string textoAImprimir)
+
+        public static string SeguirIngresando(string textoAImprimir)
         {
             bool ok = false;
             string opcionElegida;
