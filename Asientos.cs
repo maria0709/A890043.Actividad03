@@ -150,7 +150,7 @@ namespace A890043.Actividad03
             {
                 if (contador < Haber.Count)
                 {
-                    retorno += $"\n|{padding.PadLeft(10, ' ')}|{Fecha} |{item.Key.ToString().PadLeft(12, ' ')}|{padding.PadLeft(13, ' ')}|{item.Value.ToString().PadLeft(10, ' ')}   |"; 
+                    retorno += $"\n|{Numero.ToString().PadLeft(10, ' ')}|{Fecha} |{item.Key.ToString().PadLeft(12, ' ')}|{padding.PadLeft(13, ' ')}|{item.Value.ToString().PadLeft(10, ' ')}   |"; 
                     //  retorno += $"\n|{padding.PadLeft(10, ' ')}|{padding.PadRight(19, ' ')}|{item.Key.ToString().PadLeft(12, ' ')}|{padding.PadLeft(13, ' ')}|{item.Value.ToString().PadLeft(10, ' ')}   |";
                 }
                 else

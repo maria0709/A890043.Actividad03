@@ -28,7 +28,7 @@ namespace A890043.Actividad03
             Console.WriteLine("--------------------------------------------------");
             do
             {
-                Console.Write("Ingrese una opción del menú y presione [Enter]: \n");
+                Console.Write("Ingrese una opción del menú y presione [Enter]: ");
 
                 opcion = Console.ReadLine().ToUpper();
 
